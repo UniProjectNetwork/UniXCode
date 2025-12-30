@@ -1,0 +1,42 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:UniXCode.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+             x:Class="UniXCode.Views.MainView"
+             x:DataType="vm:MainViewModel"
+             Background="White"
+             Height="1080"
+             Width="1920">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+  <Grid Classes="Grid1" VerticalAlignment="Center">
+    <StackPanel>
+      <Button Width="20" Height="10" VerticalAlignment="Top">
+        <TextBox Text="Settings"/>
+      </Button>
+    </StackPanel>
+    <StackPanel>
+      <Rectangle Width="225" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Height="1080" Fill="#FF848080" VerticalAlignment="Center">
+      </Rectangle>
+    </StackPanel>
+    <StackPanel>
+      
+      <StackPanel Margin="40, 40, 20, 20" Spacing="24">
+          <Button Width="160" Height="60" CornerRadius="10" DockPanel.Dock="Left">
+            <TextBlock FontSize="12" Text="Open Project" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+          </Button>
+        <Button Width="160" Height="60" CornerRadius="10" DockPanel.Dock="Left" ClickMode="Press">
+          <TextBlock FontSize="12" Text="New Project" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Button>
+      </StackPanel>
+    </StackPanel>
+    
+  </Grid>
+  
+</UserControl>
