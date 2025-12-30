@@ -1,2 +1,4 @@
 # UniXCode
-for now its default
+
+Highly Development
+Uses AvaloniaUI
